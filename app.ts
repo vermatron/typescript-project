@@ -36,3 +36,24 @@ if (student.role == ROLE.ADMIN) {
 }
 
 console.log(student);
+
+function add(n1: number, n2: number) {
+  return n1 + n2;
+}
+
+console.log(add(1, 8));
+
+// union type
+
+function combine(input1: number | string, input2: number | string) {
+  let result;
+  if (typeof input1 == "number" && typeof input2 == "number") {
+    result = input1 + input2;
+  } else {
+    result = input1.toString() + ", " + input2.toString();
+  }
+  return result;
+}
+
+console.log(combine("max", "hina"));
+console.log(combine(10, 8));
