@@ -1,5 +1,10 @@
 console.log("Your code goes hssssfffere...");
 
+enum ROLE {
+  "READ_ONLY",
+  "ADMIN",
+}
+
 const person: {
   name: string;
   age: number;
@@ -15,3 +20,19 @@ const person: {
 // person.role[1] = 2;
 
 console.log(person);
+
+const student: {
+  name: string;
+  age: number;
+  role: ROLE;
+} = {
+  name: "Ashit",
+  age: 30,
+  role: ROLE.ADMIN,
+};
+
+if (student.role == ROLE.ADMIN) {
+  console.log("User is admin");
+}
+
+console.log(student);
